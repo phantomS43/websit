@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Pactalis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="sticky">
+        <nav class="navbar">
+            <div class="logo"> <img src="logo-placeholder.png" alt="Logo" height="36"> Soluciones Pactalis</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#servicios">SERVICIOS</a></li>
+                <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Desbloqueando el Futuro Financiero</h1>
+            <p>Soluciones Pactalis es un grupo tecnológico digital de vanguardia especializado en big data e
+                inteligencia artificial en el mundo financiero.</p>
+            <p>Nuestra misión es elevar la calidad y eficiencia de los servicios financieros mediante la tecnología,
+                creando experiencias excepcionales para usuarios en todo el mundo.</p>
+            <a href="#servicios" class="btn-main">Descubre nuestros servicios</a>
+        </div>
+        <div class="hero-img">
+            <img src="hero-illustration.png" alt="Tecnología financiera" height="220">
+        </div>
+    </section>
+    <section id="servicios" class="servicios fade-in">
+        <h2>Nuestros Servicios</h2>
+        <div class="divider"></div>
+        <div class="servicios-lista">
+            <div class="servicio card">
+                <div class="icon"><i class="fas fa-database"></i></div>
+                <h3>Big Data Financiero</h3>
+                <p>Soluciones avanzadas de análisis y gestión de grandes volúmenes de datos para instituciones
+                    financieras.</p>
+            </div>
+            <div class="servicio card">
+                <div class="icon"><i class="fas fa-robot"></i></div>
+                <h3>Inteligencia Artificial</h3>
+                <p>Implementación de IA para optimizar procesos, reducir riesgos y mejorar la toma de decisiones en el
+                    sector financiero.</p>
+            </div>
+            <div class="servicio card">
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Innovación en Finanzas al Consumo</h3>
+                <p>Desarrollo de productos y servicios enfocados en el usuario final, especialmente en América y México.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="acerca" class="acerca fade-in">
+        <h2>Acerca de Nosotros</h2>
+        <div class="divider"></div>
+        <div class="acerca-content">
+            <div class="acerca-text">
+                <p>Soluciones Pactalis se enfoca especialmente en el sector de finanzas al consumo, con una estrategia
+                    clara orientada hacia América, y en particular México, donde hemos concentrado nuestros esfuerzos.
+                    Buscamos transformar el panorama financiero de esta tierra llena de potencial, brindando servicios
+                    financieros más eficientes y de mayor calidad a los usuarios locales a través de la innovación
+                    tecnológica.</p>
+            </div>
+            <div class="acerca-img">
+                <img src="team-placeholder.png" alt="Equipo Pactalis" height="180">
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="contacto fade-in">
+        <h2>Contacto</h2>
+        <div class="divider"></div>
+        <div class="contacto-box">
+            <h3>NO DUDES EN CONTACTARNOS</h3>
+            <div class="contacto-info-list">
+                <div class="contacto-info-item">
+                    <div class="contacto-info-title"><i class="fas fa-envelope"></i> Envíe aquí</div>
+                    <div class="contacto-info-content">ayuda@pactalis.com</div>
+                </div>
+                <div class="contacto-info-item">
+                    <div class="contacto-info-title"><i class="fas fa-map-marker-alt"></i> Visita aquí</div>
+                    <div class="contacto-info-content">MANZANA 290 LOTE 42, MIGUEL DE LA MADRID HURTADO, IZTAPALAPA,
+                        CIUDAD DE MEXICO</div>
+                </div>
+                <div class="contacto-info-item">
+                    <div class="contacto-info-title"><i class="fas fa-phone"></i> Llama aquí</div>
+                    <div class="contacto-info-content"> (+52) 55 8462 2873 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo-placeholder.png" alt="Logo" height="32"> Soluciones Pactalis
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <p>Soluciones Pactalis S.A.P.I. de C.V. &copy; 2025. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // 滚动淡入动画
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+        faders.forEach(fader => { appearOnScroll.observe(fader); });
+    </script>
+</body>
+
+</html>
